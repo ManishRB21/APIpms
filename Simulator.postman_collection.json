@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "9e892bee-3221-4103-a2d8-cb61eabafaef",
+		"name": "Simulator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24002075"
+	},
+	"item": [
+		{
+			"name": "check",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "{",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "host",
+							"value": " \"10.20.30.40\",",
+							"type": "text"
+						},
+						{
+							"key": "port",
+							"value": " 8880,",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": " \"lge\",",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": " \"123456\",",
+							"type": "text"
+						},
+						{
+							"key": "auth",
+							"value": " {",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": " \"123456789\",",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": " \"lge\"",
+							"type": "text"
+						},
+						{
+							"key": "}",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "room",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/rooms/01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"rooms",
+						"01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Anita k\",\r\n    \"roomId\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checkin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "folio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"id\":\"900-1\",\r\n     \"status\":\"open\",\r\n     \"items\": {\r\n     \r\n         \"amount\":300, \"description\":\"Magazine\", \"created\":\"2023-03-29T10:21:40.859Z\", \"display\":true, \"id\":1\r\n     \r\n     },\r\n      \"balance\":300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/rooms/900/folios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"rooms",
+						"900",
+						"folios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "site",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"lge\",\r\n    \"currency\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/site",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"site"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"status\":\"success\",\r\n\"data\":{\"checkedIn\":true,\r\n    \"firstName\":\"Manish\",\r\n    \"lastName\":\"Behera\",\r\n    \"salutation\":null\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/rooms/21/guests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"rooms",
+						"21",
+						"guests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \"text\":\"hello\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/rooms/101/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"rooms",
+						"101",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"hello 11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pms/v2/rooms/101/checkout/101-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pms",
+						"v2",
+						"rooms",
+						"101",
+						"checkout",
+						"101-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

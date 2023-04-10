@@ -1,0 +1,27 @@
+{
+  "name": "apipms",
+  "version": "1.0.0",
+  "description": "- output \r ```json\r {\r     \"count\": 2,\r     \"guests\": [\r         {\r             \"id\": 1,\r             \"name\": \"manish\",\r             \"roomId\": 200\r         },\r         {\r             \"id\": 2,\r             \"name\": \"m r behera\",\r             \"roomId\": 12\r         }\r     ]\r }\r ```\r ## GET req : on the basis of room number localhost:3000/checkin/room/:roomId\r - output\r ```json\r {\r     \"status\": \"success\",\r     \"data\": {\r         \"id\": 2,\r         \"guests\": [\r             {\r                 \"name\": {\r                     \"prefix\": null,\r                     \"first\": \"m\",\r                     \"middle\": \"r\",\r                     \"last\": \"behera\",\r                     \"suffix\": null,\r                     \"full\": [\r                         \"m\",\r                         \"r\",\r                         \"behera\"\r                     ]\r                 },\r                 \"balance\": null,\r                 \"language\": null,\r                 \"email\": \"mrb@t.com\",\r                 \"phone\": 123456,\r                 \"no_post\": null,\r                 \"vip_status\": null,\r                 \"id\": 2,\r                 \"checkout\": null,\r                 \"option\": null,\r                 \"channel_preference\": null\r             }\r         ],\r         \"folios\": {}\r     }\r }\r ```\r ## POST req : localhost:3000/checkin\r - input\r ```json\r {\r     \"name\":\"manish\",\r     \"roomId\":200\r }\r ```\r - output \r ```json\r {\r     \"Subscription\": 1,\r     \"request\": {\r         \"type\": \"checkin\",\r         \"room\": 200,\r         \"checkin\": {\r             \"room\": 200,\r             \"guest\": null\r         },\r         \"source\": {\r             \"type\": \"live\"\r         },\r         \"created\": \"2023-03-25T11:36:00.677Z\"\r     },\r     \"response\": {\r         \"statusCode\": 200,\r         \"statusMessage\": \"success\"\r     }\r }\r ``` \r ## POST req : localhost:3000/checkin2\r - input\r ```json\r {\r         \"name\" : \"m r behera\",\r         \"roomId\": 12,\r         \"lang \": \"en_US\",\r         \"email\": \"mrb@t.com\",\r         \"phone\": 123456\r }\r ```\r - output\r ```json\r {\r     \"Subscription\": 2,\r     \"request\": {\r         \"type\": \"checkin\",\r         \"room\": 12,\r         \"checkin\": {\r             \"room\": 12,\r             \"guest\": null\r         },\r         \"source\": {\r             \"type\": \"live\"\r         },\r         \"created\": \"2023-03-25T11:37:36.357Z\"\r     },\r     \"response\": {\r         \"statusCode\": 200,\r         \"statusMessage\": \"success\"\r     }\r }\r ```\r ## DELETE req : on the basis of room number localhost:3000/checkin/room/:roomId\r - output\r ```json\r {\r     \"response\": {\r         \"statusCode\": 200,\r         \"statusMessage\": \"success\"\r     }\r }\r ```",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManishRB21/APIpms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManishRB21/APIpms/issues"
+  },
+  "homepage": "https://github.com/ManishRB21/APIpms#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "is-json": "^2.0.1",
+    "lodash": "^4.17.21",
+    "mariadb": "^3.1.1",
+    "request-promise": "^4.2.6"
+  }
+}
