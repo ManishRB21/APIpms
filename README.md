@@ -131,37 +131,3 @@
 ```
 
 
-////
-const newBalance = parseFloat(req.body.amount) + parseFloat(req.body.balance);
-
-  const response = {
-    id: id,
-    status: 'open',
-    balance: newBalance,
-    items: [
-      {
-        id: 1,
-        created: '2012-05-25T17:27Z',
-        description: 'in room movie',
-        amount: 5.19,
-        display: true,
-      },
-      {
-        id: 2,
-        created: '2012-05-25T17:27Z',
-        description: 'room charge',
-        amount: 60,
-        display: true,
-      },
-      {
-        id: 3,
-        created: new Date().toISOString(),
-        description: description,
-        amount: parseFloat(amount),
-        display: true,
-      },
-    ],
-  };
-
-  // Send the response object as a JSON payload
-  res.json(response);
